@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Regolamento - Duolimpiadi</title>
+		<link rel="stylesheet" href="/style.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="header-left">
+				<a href="/">Duolimpiadi</a>
+			</div>
+			<div class="header-right">
+				<a href="/regolamento">Regolamento</a>
+				<a href="/gare">Gare</a>
+				<a href="/duequadro">Duequadro</a>
+			</div>
+		</header>
+
+		<main>
+			<h1>Regolamento — Duolimpiadi</h1>
+
+			<p>
+				La gara si svolge in una durata di tre ore, durante le quali ogni coppia partecipante dovrà risolvere quattro problemi dimostrativi. Quando una coppia ha risolto un problema, consegna la dimostrazione completa (e preferibilmente leggibile). Una volta consegnata, la dimostrazione non ammette nessuna modifica; ci si assicuri di inviare la dimostrazione <em>completa</em>. Al termine della gara, le dimostrazioni di ogni coppia verranno valutate con un punteggio intero tra 0 e 10. Questo punteggio verrà tramutato in uno <em>score</em> che dipende sia dal minuto di consegna, sia dalla posizione nella lista di coppie in ordine di risoluzione corretta del problema. L'ordine di vittoria è l'ordine decrescente della somma degli score conseguiti in ogni problema da ciascuna coppia.
+			</p>
+
+			<p>
+				L'unico strumento di calcolo ammesso è la <a href="https://duequadro.rubenverg.com/calculator">calcolatrice ufficiale</a>. Non è ammesso l'utilizzo di altri strumenti di calcolo o formulari; non è ammesso comunicare (riguardo alla gara) con nessuna persona eccetto il proprio compagno di coppia; è permesso utilizzare un compasso e uno <em>straightedge</em> (cioè una riga senza tacche di misura) a testa; non è permesso in generale utilizzare strumenti che permettano una misura.
+			</p>
+
+			<p>
+				È fortemente incoraggiata la collaborazione all'interno della coppia; la difficoltà della gara è studiata pensando a dinamiche di lavoro che coinvolgano entrambe le persone.
+			</p>
+
+			<p>
+				Il seguente processo verrà applicato per il calcolo dello score: nel momento della consegna, un problema che viene corretto e valutato \(p\) punti che è stato già risolto da un numero di coppie ciascuna conseguendo \(p_i\) punti viene trasformato in uno score iniziale $$
+				s_0 \coloneqq (1 + 2x)p
+				$$ dove \(c\) indica il numero totale di coppie che partecipano alla gara e $$
+				x \coloneqq \left(1 - \frac 1 c \sum_i \frac{p_i}{10}\right)^3
+				$$
+			</p>
+
+			<p>
+				Ogni 5 minuti dalla consegna del problema, fino allo scadere delle 3 ore, se il problema (in quel momento) è stato risolto da un numero di coppie ciascuna conseguendo \(p'_i\) punti, lo score \(s_t\) incrementa diventando $$
+				s_{t+1} \coloneqq s_t + \frac{s_t}{20} x'
+				$$ dove $$
+				x' \coloneqq \left(1 - \frac 1 c \sum_i \frac{p'_i}{10}\right)^3
+				$$
+			</p>
+
+			<p>
+				I punteggi sono trattati come numeri esatti in tutti i passaggi intermedi, e vengono arrotondati per difetto una volta completati tutti gli incrementi.
+			</p>
+		</main>
+	</body>
+</html>
