@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Gare - Duolimpiadi</title>
+		<link rel="stylesheet" href="/style.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="header-left">
+				<a href="/">Duolimpiadi</a>
+			</div>
+			<div class="header-right">
+				<a href="/regolamento">Regolamento</a>
+				<a href="/gare">Gare</a>
+				<a href="/duequadro">DueQuadro</a>
+			</div>
+		</header>
+
+		<main>
+			<ul>
+				<li><a href="./Duolimpiadi II.pdf">Testo in PDF</a></li>
+				<li><a href="./Duolimpiadi II (EN).pdf">Testo in PDF (inglese)</a></li>
+				<li><a href="./Duolimpiadi II - Soluzioni.pdf">Soluzioni in PDF</a></li>
+			</ul>
+
+			<h2 class="comp-name">
+				Duolimpiadi II
+				<small class="subtitle">Alla ricerca della tavoletta dell'\(n\)-agono</small>
+			</h2>
+
+			<small class="lore">
+				Madeline e Biagio, mentre ricercavano gli antichi problemi delle Duolimpiadi I, hanno scoperto dell'altrettanto antica leggenda della tavoletta dell'\(n\)-agono. Si dice che, quando letta, dia la capacità di diventare decenti in geometria. Speranzosi che la leggenda sia vera, decidono di organizzarsi per cercare la tavoletta.
+			</small>
+
+			<h3>\(\mathrm{II}^0\). Il gioco e il Gioco</h3>
+
+			<small class="lore">
+				Biagio non perde mai occasione di fare perdere il Gioco a Madeline. Prima di partire, allora, escogita un piano: le propone due giochi, il primo dei quali è interessante e il secondo dei quali è una trappola. Riuscirà nel suo intento?
+			</small>
+
+			<div>
+				Biagio propone due giochi a Madeline. Il primo è il seguente: sceglie due sequenze di numeri interi positivi \((a_i)_{i=1}^m\) e \((b_j)_{j=1}^n\) e crea una griglia con \(m\) righe e \(n\) colonne, dove in ogni cella \((i, j)\) scrive il numero \(a_i \cdot b_j\). Mostra la griglia a Madeline, che deve indovinare le due sequenze. Per quali griglie create da Biagio esiste una strategia per Madeline che garantisce che lei vinca?
+			</div>
+
+			<h3>\(\mathrm{II}^1\). Work smarter, not harder</h3>
+
+			<small class="lore">
+				La tavoletta è detta trovarsi in una tra dieci località, che sono tutte contenute in un triangolo equilatero di lato pari a \(2\mathrm{Mm}\). Madeline è pigra e non vuole fare troppa strada. Si chiede allora se esistono due località che sono piuttosto vicine tra loro; se esistessero allora insisterebbe per partire da quelle due.
+			</small>
+
+			<div>
+				Dato un triangolo equilatero di lato \(2\), sono scelti dieci punti al suo interno. Determinare se esistono sempre due punti tra questi distanti al massimo \(\displaystyle \frac{2^{2^2}}{2^{2^2} + 2^2 + 2}\).
+			</div>
+
+			<h3>\(\mathrm{II}^{\log_{\mathrm{II}} (3)}\). Il campeggio infinito</h3>
+
+			<small class="lore">
+				Biagio e Madeline hanno controllato nove delle dieci località, e hanno quasi perso le speranze. Mentre viaggiano verso la decima, decidono di fermarsi in un campeggio per riposare. Arrivando dall'alto, vedono che tutte le tende sono disposte in file. Madeline nota che ci sono infinite file di tende, ma Biagio aggiunge che ogni fila contiene un numero finito di tende. Madeline allora suggerisce: "È vero, ci sono proprio \(\operatorname{Duo}(n) / \operatorname{Duo}(0)\) tende per fila!" Biagio le risponde, "ma quel numero è effettivamente sempre naturale?", a cui lei commenta "hai mai visto mezza tenda?"
+			</small>
+
+			<div>
+				Si chiama \(\operatorname{Duo}(n)\) la serie \(\displaystyle \sum_{j = 0}^\infty \frac{j^n}{j!}\), che si può supporre convergente. Dimostrare che $$
+	\frac{\operatorname{Duo}(n)}{\operatorname{Duo}(0)} \in \mathbb{N}
+	$$ per ogni \(n \in \mathbb{N}\).
+			</div>
+
+			<h3>\(\mathrm{II}^{\mathrm{II}}\). Ad un ■ dalla fine</h3>
+
+			<small class="lore">
+				Madeline e Biagio sono arrivati alla decima località. All'ingresso vedono un problema inciso su una porta. A fianco ci sono dei fogli, delle matite e dei colori. Sotto alla scritta c'è un taglio rettangolare, è evidente che debbano risolvere il problema e inserire la dimostrazione. Madeline suggerisce che questo ostacolo sia promettente per trovare la tavoletta, ma Biagio nota che non c'è scritto da nessuna parte che dietro la grande porta chiusa stia effettivamente quello che stanno cercando.
+			</small>
+
+			<div>
+				Sia \(\sigma_0(n)\) il numero di divisori positivi di \(n\). Trovare tutti gli \(n \in \mathbb{Z}^+\) per cui $$
+	\sigma_0(3^n - 2^n) = n
+	$$
+			</div>
+		</main>
+	</body>
+</html>
